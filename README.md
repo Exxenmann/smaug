@@ -11,4 +11,4 @@ Planning a web frontend / Android client / Linux, Windows desktop client.
 For development I use Vagrant.  
   
 Currently its not much more than this:  
-![alt text](https://github.com/Exxenmann/smaug/blob/master/README/github_description_frontend_screenshot.jpg.png?raw=true "smaug WIP screenshot")
+![alt text](https://github.com/Exxenmann/smaug/blob/master/README/github_description_frontend_screenshot.jpg?raw=true "smaug WIP screenshot")
