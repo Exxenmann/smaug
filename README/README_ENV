@@ -1,0 +1,58 @@
+   install git
+   checkout repo
+   install nginx
+
+<!-- set swap size higher -->
+   sudo nano /etc/dphys-swapfile
+
+<!-- install php -->
+   sudo apt-get update
+   sudo apt install php7.0 php7.0-curl php7.0-gd php7.0-imap php7.0-json php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-xmlrpc php7.0-xml php7.0-fpm php7.0-zip php7.0-mbstring -y
+
+<!-- activate php in nginx -->
+   look at smaug/env-install/nginx-sites_available_default
+   sudo service nginx restart
+   sudo service php7.0-fpm restart
+
+<!-- install composer -->
+   copy smaug/env-install/install_composer_here.sh to where you want to install composer
+
+<!-- install laravel global -->
+   composer create-project laravel/laravel smaug "5.5.*" --prefer-dist
+
+<!-- install mysql -->
+   sudo apt-get install mysql-server
+
+<!-- set root pw -->
+   sudo service mysql stop
+   sudo mysqld_safe --skip-grant-tables&
+   sudo mysql --user=root mysql
+   mysql> update user set authentication_string=PASSWORD('new-password') where user='root';
+   flush privileges;
+   quit
+   sudo service mysql restart
+   sudo mysql -u root -p
+   create database smaug; <!-- create db -->
+   GRANT ALL PRIVILEGES ON *.* TO 'smaug'@'192.%' IDENTIFIED BY 'password'; <!-- create user -->
+   exit
+
+<!-- allow remote connections -->
+   sudo vi /etc/mysql/my.cnf
+
+   insert:
+   [mysqld]
+      bind-address = 0.0.0.0
+
+   sudo service mysql restart
+
+<!-- change user remote permissions -->
+   RENAME USER 'smaug'@'localhost' TO 'smaug'@'%';
+
+<!-- install nvm -->
+   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+<!-- with nvm install node npm -->
+   nvm install stable
+
+<!-- with npm install angular -->
+   npm install -g @angular/cli

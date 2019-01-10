@@ -1,0 +1,60 @@
+
+//////////////////////////////////
+// global vars
+//////////////////////////////////
+
+// colors
+@main_color: black;
+@maincontrast_color: white;
+
+@border-color: black;
+
+@inactivebg_color: lightgray;
+
+// margins / paddings
+@main_margin: 5px;
+@main_padding: 5px;
+
+@input_std_margin: 5px;
+@btn_std_padding: 5px;
+
+// other constants
+@footer_height: 50px;
+
+html, body{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body, input, button{
+  font-family: "Courier New";
+  font-size: 14px;
+}
+
+input{
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input, button{
+  margin: @input_std_margin;
+}
+
+button{
+  background: @inactivebg_color;
+  border: none;
+
+  padding:@btn_std_padding;
+
+  transition: all .4s ease;
+
+  &:hover{
+    background: @main_color;
+    color: @maincontrast_color;
+  }
+}

@@ -1,0 +1,21 @@
+h1{
+  margin:0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#cursor {
+  color:#dddddd;
+  animation: blink-animation 1.2s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1.2s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
