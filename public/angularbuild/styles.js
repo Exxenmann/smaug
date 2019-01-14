@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "html,\nbody {\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n}\nbody,\ninput,\nbutton {\n  font-family: \"Courier New\";\n  font-size: 14px;\n}\ninput {\n  border: 1px solid black;\n  padding-left: 5px;\n}\ninput:focus,\ntextarea:focus {\n  outline: none;\n}\ninput,\nbutton {\n  margin: 5px;\n}\nbutton {\n  background: lightgray;\n  border: none;\n  padding: 5px;\n  transition: all 0.4s ease;\n}\nbutton:hover {\n  background: black;\n  color: white;\n}\n"
+module.exports = "html,\nbody {\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n}\nbody,\ninput,\nbutton {\n  font-family: \"Courier New\";\n  font-size: 14px;\n}\ninput {\n  border: 1px solid black;\n  padding-left: 5px;\n}\ninput:focus,\ntextarea:focus {\n  outline: none;\n}\ninput,\nbutton {\n  margin: 5px;\n}\nbutton {\n  background: lightgray;\n  border: none;\n  padding: 5px;\n  transition: all 0.4s ease;\n}\nbutton:hover {\n  background: black;\n  color: white;\n}\n#spinner {\n  position: fixed;\n  left: 50%;\n  top: 50%;\n  opacity: 0;\n  visibility: hidden;\n  transition: all ease 0.4s;\n  width: 140px;\n  margin-left: -70px;\n  margin-top: -78.2px;\n}\n"
 
 /***/ }),
 

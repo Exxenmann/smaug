@@ -153,11 +153,6 @@ export const uiRouterStates = [
    //          token: 'download_token',
    //          deps: [ UserService ],
    //          resolveFn: resolveDownloadToken
-   //       },
-   //       {
-   //          token: 'stats',
-   //          deps: [ UserService ],
-   //          resolveFn: resolveRateoniumStats
    //       }
    //    ]
    // },

@@ -1,15 +1,27 @@
-<form>
+<div class="login">
+  <form [formGroup]="loginForm" name="login" (ngSubmit)="onSubmit()">
 
-  <div>
-    <input type="email" name="email" placeholder="email">
-  </div>
+    <div class="form-group">
+       <input type="email" name="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="email" />
+       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+         <div class="required_msg" *ngIf="f.email.errors.required">Required</div>
+         <div class="required_msg" *ngIf="f.email.errors.email">Please enter a valid email address</div>
+      </div>
+    </div>
 
-  <div>
-    <input type="password" name="password" placeholder="password">
-  </div>
-  
-  <div>
-    <button type="submit">login</button>
-  </div>
-  
-</form>
+    <div class="form-group">
+      <input type="password" name="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="password"/>
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div class="required_msg" *ngIf="f.password.errors.required">Required</div>
+        <div class="required_msg" *ngIf="f.password.errors.minlength">At least 6 characters are required</div>
+      </div>
+      <div uiSref="base.password_reset_request" class="password-reset" (click)="onSubmit_event.emit()">Forgot Your Password?</div>
+    </div>
+
+    <div class="form-group">
+      <button>log in</button>
+    </div>
+
+  </form>
+
+</div>

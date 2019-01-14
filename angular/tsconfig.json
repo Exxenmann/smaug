@@ -17,6 +17,7 @@
       "@components/*": ["./app/components/*"],
       "@interfaces/*": ["./app/interfaces/*"],
       "@services/*": ["./app/services/*"],
+      "@helper/*": ["./app/helper/*"],
       "@base/*": [".*"],
     },
 
