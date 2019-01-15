@@ -113,15 +113,16 @@ printf "XX install NPM, Node and Angular-CLI XX\n\n"
 
 printf "XX configure MySQL XX\n\n"
 {
-  # sudo sed -i "s/bind-address/#bind-address/" /etc/mysql/mysql.conf.d/mysqld.cnf
-  # sudo /etc/init.d/mysql restart
+  sudo sed -i "s/bind-address/#bind-address/" /etc/mysql/mariadb.conf.d/50-server.cnf
+  sudo service mysql restart
   mysql -uroot -proot -e "CREATE DATABASE ${DB_DATABASE} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
   mysql -uroot -proot -e "CREATE USER ${DB_USERNAME}@'%' IDENTIFIED BY '${DB_PASSWORD}';"
 
   # this is needed becuase % does not include localhost / unix pipes etc 
   mysql -uroot -proot -e "CREATE USER ${DB_USERNAME}@'localhost' IDENTIFIED BY '${DB_PASSWORD}';"
 
-  mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON ${DB_DATABASE}.* TO '${DB_USERNAME}'@'%';"
+  mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON ${DB_DATABASE}.* TO '${DB_USERNAME}'@'localhost' IDENTIFIED BY '${DB_PASSWORD}';"
+  mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON ${DB_DATABASE}.* TO '${DB_USERNAME}'@'%' IDENTIFIED BY '${DB_PASSWORD}';"
   mysql -uroot -proot -e "FLUSH PRIVILEGES;"
 } >> $logfile 2>>$error_logfile
 
@@ -131,6 +132,7 @@ printf "XX init smaug XX\n\n"
   composer install
   php artisan key:generate
   php artisan migrate
+  php artisan db:seed
   cd angular
   npm install
 } >> $logfile 2>>$error_logfile
