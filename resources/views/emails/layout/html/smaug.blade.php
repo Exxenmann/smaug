@@ -1,37 +1,7 @@
-
-
-{{-- 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-
-<body>
-    <style>
-        @media only screen and (max-width: 600px) {
-            .inner-body {
-                width: 100% !important;
-            }
-
-            .footer {
-                width: 100% !important;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .button {
-                width: 100% !important;
-            }
-        }
-    </style> --}}
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Profile confirmation Rateonium</title>
+<title>smaug</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
@@ -387,7 +357,7 @@ td[class="split"]{width: 100% !important; padding-right: 0px !important;padding-
                                       <tr>
                                         <td><table width="250" border="0" cellspacing="0" cellpadding="0" align="center">
                                             <tr>
-                                              <td><a href="http://rateonium.com/"><img class="logo" src="https://s15.postimg.cc/oe4nsh7rv/Logo_copy.png" width="250" height="51" style="max-width:250px;" /></a></td>
+                                              <td><img class="logo" src="https://s15.postimg.cc/oe4nsh7rv/Logo_copy.png" width="250" height="51" style="max-width:250px;" /></td>
                                             </tr>
                                           </table></td>
                                       </tr>
@@ -429,7 +399,7 @@ td[class="split"]{width: 100% !important; padding-right: 0px !important;padding-
                      <tr>
                   <td><table width="250" border="0" cellspacing="0" cellpadding="0" align="center">
                      <tr>
-                       <td><a href="http://rateonium.com/"><img class="logo" src="https://s15.postimg.cc/oe4nsh7rv/Logo_copy.png" width="250" height="51" style="max-width:250px;" /></a></td>
+                       <td><img class="logo" src="https://s15.postimg.cc/oe4nsh7rv/Logo_copy.png" width="250" height="51" style="max-width:250px;" /></td>
                      </tr>
                     </table></td>
                  </tr>
@@ -439,7 +409,7 @@ td[class="split"]{width: 100% !important; padding-right: 0px !important;padding-
                     <tr>
                       <td  mc:edit="edgffdtghdfghgsfdfsgvftjftjhwwwfrf5f85fw7"  class="em_grey_txt" style="font-family:'Roboto', Arial, sans-serif;font-size:13px;text-align:center;color:#808080;line-height:20px;">
                  
-                     A blockchain-based, anonymised customer-company review system operated via the Rateonium platform. <br/> 
+                     smaug<br/> 
                      Dont want to receive future emails? <a style="color:#414141;text-decoration:none;" href="#">Click here to unsubscribe</a>
 
 
@@ -457,36 +427,6 @@ td[class="split"]{width: 100% !important; padding-right: 0px !important;padding-
         <!-- ===== //SINGLE COLUMN SECTION ===== -->
         
         <!-- ===== SOCIAL ICON ===== -->
-        <tr>
-          <td bgcolor="#F0F0F0"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
-              </tr>
-              <tr>
-                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td>
-                       <table align="center" width="240" border="0" cellpadding="0" cellspacing="0"  >
-                     <tr>
-                        <td width="40" height="40" style="background-color:#C0191E;border-radius:50px;"  ><a href="https://twitter.com/_rateonium" class="modimg" style="color:#7B9C4D;"><img mc:edit="etsstsatt7" src="http://s31.postimg.cc/u4ich086z/icon_youtube.png" width="40" height="40" style="max-width:40px;display:block; border: none;" border="0"  alt="h"  /></a></td>
-                        <td width="10"></td>
-                        <td width="40" height="40" style="background-color:#C0191E;border-radius:50px;" ><a href="#" class="modimg" style="color:#7B9C4D;"><img mc:edit="eqgfssgqqq7" src="http://s32.postimg.cc/anx8c1a1d/icon_facebook.png" width="40" height="40" style="max-width:40px;display:block; border: none;" border="0" alt="fb"   /></a></td>
-                        <td width="10"></td>
-                        <td width="40" height="40" style="background-color:#C0191E;border-radius:50px;"  ><a href="#" class="modimg" style="color:#7B9C4D;"><img mc:edit="ewasfwww7" src="http://s32.postimg.cc/6whjru6a9/icon_twitter.png" width="40" height="40" style="max-width:40px;display:block; border: none;" border="0"  alt="tw"   /></a></td>
-                        <td width="10"></td>
-                        <td width="40" height="40" style="background-color:#C0191E;border-radius:50px;"  ><a href="https://www.reddit.com/r/Rateonium" class="modimg" style="color:#FF0084;"><img mc:edit="ewwarfwaw7" src="https://s15.postimg.cc/qy9he6kez/reedit.png" width="40" height="40" style="max-width:40px;display:block; border: none;" border="0"  alt="tw" /></a></td>
-                        <td width="10"></td> 
-                                <td width="40" height="40" style="background-color:#C0191E;border-radius:50px;"  ><a href="https://t.me/rateonium" class="modimg" style="color:#7B9C4D;"><img mc:edit="etsstsatt7" src="https://s15.postimg.cc/jjk5lqlnv/icon_instagram_copy.png" width="40" height="40" style="max-width:40px;display:block; border: none;" border="0"  alt="h"  /></a></td>
-                                                
-                     </tr>
-                  </table>
-                  </td>
-                    </tr>
-                  </table></td>
-              </tr>
-             
-            </table></td>
-        </tr>
       <tr>
           <td><table bgcolor="#F0F0F0" width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
