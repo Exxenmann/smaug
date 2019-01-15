@@ -11,5 +11,7 @@ npm-debug.log
 yarn-error.log
 .env
 
-#own changes
+#smaug dev
 ubuntu-xenial-16.04-cloudimg-console.log
+vagrant_install.errors.log
+vagrant_install.log
