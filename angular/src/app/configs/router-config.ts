@@ -12,7 +12,7 @@ import { LoginComponent } from '@components/views/login/login.component'
 
 // import { VerifyMailComponent } from '@components/page/verify-mail/verify-mail.component'
 // import { PasswordResetUseComponent } from '@components/auth/password-reset-use/password-reset-use.component'
-// import { PasswordResetRequestComponent } from '@components/auth/password-reset-request/password-reset-request.component'
+import { PasswordResetComponent } from '@components/auth/passwordreset/passwordreset.component'
 // import { AdminComponent } from '@components/page/admin/admin.component'
 // import { AdvantagesComponent } from '@components/page/advantages/advantages.component'
 
@@ -96,15 +96,15 @@ export const uiRouterStates = [
    //    },
    //    data: {}
    // },
-   // {
-   //    name: 'base.password_reset_request',
-   //    url: '/password-reset',
-   //    resolve: [],
-   //    views: {
-   //       main: { component: PasswordResetRequestComponent }
-   //    },
-   //    data: { background: 'red' }
-   // },
+  {
+    name: 'base.password_reset',
+    url: '/password-reset',
+    resolve: [],
+    views: {
+       main: { component: PasswordResetComponent }
+    },
+    data: { background: 'red' }
+  },
    // {
    //    name: 'base.password_reset_use',
    //    url: '/password-reset/:token',

@@ -13,6 +13,7 @@ import { ContentComponent } from '@components/content/content.component';
 import { CubestackComponent } from '@components/cubestack/cubestack.component';
 import { DashboardComponent } from '@components/views/dashboard/dashboard.component';
 import { ModalGeneralComponent } from '@components/modals/modal-general/modal-general.component';
+import { PasswordResetComponent } from '@components/auth/passwordreset/passwordreset.component'
 
 import {RestService} from '@services/rest.service'
 
@@ -20,7 +21,7 @@ import { ReactiveFormsModule, FormsModule }    from '@angular/forms'
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
-import { JwtInterceptor } from '@helper/jwt-inceptor'
+import { JwtInterceptor } from '@helper/jwt-inceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { JwtInterceptor } from '@helper/jwt-inceptor'
     ContentComponent,
     CubestackComponent,
     DashboardComponent,
-    ModalGeneralComponent
+    ModalGeneralComponent,
+    PasswordResetComponent
   ],
   imports: [
     BrowserModule,

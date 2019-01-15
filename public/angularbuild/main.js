@@ -117,16 +117,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cubestack_cubestack_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @components/cubestack/cubestack.component */ "./src/app/components/cubestack/cubestack.component.ts");
 /* harmony import */ var _components_views_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @components/views/dashboard/dashboard.component */ "./src/app/components/views/dashboard/dashboard.component.ts");
 /* harmony import */ var _components_modals_modal_general_modal_general_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @components/modals/modal-general/modal-general.component */ "./src/app/components/modals/modal-general/modal-general.component.ts");
-/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @services/rest.service */ "./src/app/services/rest.service.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _helper_jwt_inceptor__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @helper/jwt-inceptor */ "./src/app/helper/jwt-inceptor.ts");
+/* harmony import */ var _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @components/auth/passwordreset/passwordreset.component */ "./src/app/components/auth/passwordreset/passwordreset.component.ts");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @services/rest.service */ "./src/app/services/rest.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _helper_jwt_inceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @helper/jwt-inceptor */ "./src/app/helper/jwt-inceptor.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -158,22 +160,23 @@ var AppModule = /** @class */ (function () {
                 _components_content_content_component__WEBPACK_IMPORTED_MODULE_9__["ContentComponent"],
                 _components_cubestack_cubestack_component__WEBPACK_IMPORTED_MODULE_10__["CubestackComponent"],
                 _components_views_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"],
-                _components_modals_modal_general_modal_general_component__WEBPACK_IMPORTED_MODULE_12__["ModalGeneralComponent"]
+                _components_modals_modal_general_modal_general_component__WEBPACK_IMPORTED_MODULE_12__["ModalGeneralComponent"],
+                _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_13__["PasswordResetComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"],
                 _uirouter_angular__WEBPACK_IMPORTED_MODULE_2__["UIRouterModule"].forRoot({
                     states: _configs_router_config__WEBPACK_IMPORTED_MODULE_3__["uiRouterStates"],
                     config: _configs_router_config__WEBPACK_IMPORTED_MODULE_3__["uiRouterConfig"] // configuration of the uiRouter (e.g. default state)
                 }),
             ],
             providers: [
-                _services_rest_service__WEBPACK_IMPORTED_MODULE_13__["RestService"],
+                _services_rest_service__WEBPACK_IMPORTED_MODULE_14__["RestService"],
                 {
-                    provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HTTP_INTERCEPTORS"],
-                    useClass: _helper_jwt_inceptor__WEBPACK_IMPORTED_MODULE_16__["JwtInterceptor"],
+                    provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HTTP_INTERCEPTORS"],
+                    useClass: _helper_jwt_inceptor__WEBPACK_IMPORTED_MODULE_17__["JwtInterceptor"],
                     multi: true
                 },
             ],
@@ -181,6 +184,100 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/auth/passwordreset/passwordreset.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/components/auth/passwordreset/passwordreset.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"password-reset-request-container\">\n  <h2>Reset your password</h2>\n  <form [formGroup]=\"formGroup\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"form-group\">\n      <input type=\"email\" formControlName=\"email\" name=\"email\" class=\"form-control\" placeholder=\"E-Mail\">\n    </div>\n\n    <div class=\"form-group\">\n      <button text=\"Request\">reset</button>\n    </div>\n  </form>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/auth/passwordreset/passwordreset.component.less":
+/*!****************************************************************************!*\
+  !*** ./src/app/components/auth/passwordreset/passwordreset.component.less ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/auth/passwordreset/passwordreset.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/auth/passwordreset/passwordreset.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: PasswordResetComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PasswordResetComponent", function() { return PasswordResetComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _uirouter_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @uirouter/angular */ "./node_modules/@uirouter/angular/lib/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _services_loadingoverlay_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @services/loadingoverlay.service */ "./src/app/services/loadingoverlay.service.ts");
+/* harmony import */ var _services_modal_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @services/modal.service */ "./src/app/services/modal.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var PasswordResetComponent = /** @class */ (function () {
+    function PasswordResetComponent(formBuilder, authService, loadingOverlay, stateService, modalService) {
+        this.authService = authService;
+        this.loadingOverlay = loadingOverlay;
+        this.stateService = stateService;
+        this.modalService = modalService;
+        this.formGroup = formBuilder.group({
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]]
+        });
+    }
+    PasswordResetComponent.prototype.onSubmit = function () {
+        var _this = this;
+        if (this.formGroup.invalid)
+            return;
+        var email = this.formGroup.value.email, promise = this.authService.requestPasswordReset(email), dialog = {
+            title: 'E-Mail sent',
+            message: "An E-Mail with the link to reset your password has been sent to " + email + "."
+        };
+        return this.loadingOverlay.wrap(promise)
+            .then(function () { return _this.modalService.info(dialog); })
+            .then(function () { return _this.stateService.go('base.home'); });
+    };
+    PasswordResetComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-passwordreset',
+            template: __webpack_require__(/*! ./passwordreset.component.html */ "./src/app/components/auth/passwordreset/passwordreset.component.html"),
+            styles: [__webpack_require__(/*! ./passwordreset.component.less */ "./src/app/components/auth/passwordreset/passwordreset.component.less")]
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _services_authentication_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"],
+            _services_loadingoverlay_service__WEBPACK_IMPORTED_MODULE_4__["LoadingoverlayService"],
+            _uirouter_angular__WEBPACK_IMPORTED_MODULE_1__["StateService"],
+            _services_modal_service__WEBPACK_IMPORTED_MODULE_5__["ModalService"]])
+    ], PasswordResetComponent);
+    return PasswordResetComponent;
 }());
 
 
@@ -663,7 +760,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login\">\r\n  <form [formGroup]=\"loginForm\" name=\"login\" (ngSubmit)=\"onSubmit()\">\r\n\r\n    <div class=\"form-group\">\r\n       <input type=\"email\" name=\"email\" formControlName=\"email\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors }\" placeholder=\"email\" />\r\n       <div *ngIf=\"submitted && f.email.errors\" class=\"invalid-feedback\">\r\n         <div class=\"required_msg\" *ngIf=\"f.email.errors.required\">Required</div>\r\n         <div class=\"required_msg\" *ngIf=\"f.email.errors.email\">Please enter a valid email address</div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <input type=\"password\" name=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" placeholder=\"password\"/>\r\n      <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\r\n        <div class=\"required_msg\" *ngIf=\"f.password.errors.required\">Required</div>\r\n        <div class=\"required_msg\" *ngIf=\"f.password.errors.minlength\">At least 6 characters are required</div>\r\n      </div>\r\n      <div uiSref=\"base.password_reset_request\" class=\"password-reset\" (click)=\"onSubmit_event.emit()\">Forgot Your Password?</div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <button>log in</button>\r\n    </div>\r\n\r\n  </form>\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"login\">\r\n  <form [formGroup]=\"loginForm\" name=\"login\" (ngSubmit)=\"onSubmit()\">\r\n\r\n    <div class=\"form-group\">\r\n       <input type=\"email\" name=\"email\" formControlName=\"email\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors }\" placeholder=\"email\" />\r\n       <div *ngIf=\"submitted && f.email.errors\" class=\"invalid-feedback\">\r\n         <div class=\"required_msg\" *ngIf=\"f.email.errors.required\">Required</div>\r\n         <div class=\"required_msg\" *ngIf=\"f.email.errors.email\">Please enter a valid email address</div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <input type=\"password\" name=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" placeholder=\"password\"/>\r\n      <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\r\n        <div class=\"required_msg\" *ngIf=\"f.password.errors.required\">Required</div>\r\n        <div class=\"required_msg\" *ngIf=\"f.password.errors.minlength\">At least 6 characters are required</div>\r\n      </div>\r\n\r\n      <div uiSref=\"base.password_reset\" class=\"password-reset\" (click)=\"onSubmit_event.emit()\">Forgot Your Password?\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <button>log in</button>\r\n    </div>\r\n\r\n  </form>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -674,7 +771,7 @@ module.exports = "<div class=\"login\">\r\n  <form [formGroup]=\"loginForm\" nam
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "html,\nbody {\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n}\nbody,\ninput,\nbutton {\n  font-family: \"Courier New\";\n  font-size: 14px;\n}\ninput {\n  border: 1px solid black;\n  padding-left: 5px;\n}\ninput:focus,\ntextarea:focus {\n  outline: none;\n}\ninput,\nbutton {\n  margin: 5px;\n}\nbutton {\n  background: lightgray;\n  border: none;\n  padding: 5px;\n  transition: all 0.4s ease;\n}\nbutton:hover {\n  background: black;\n  color: white;\n}\n#spinner {\n  position: fixed;\n  left: 50%;\n  top: 50%;\n  opacity: 0;\n  visibility: hidden;\n  transition: all ease 0.4s;\n  width: 140px;\n  margin-left: -70px;\n  margin-top: -78.2px;\n}\nform {\n  text-align: center;\n}\n"
+module.exports = "html,\nbody {\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n}\nbody,\ninput,\nbutton {\n  font-family: \"Courier New\";\n  font-size: 14px;\n}\ninput {\n  border: 1px solid black;\n  padding-left: 5px;\n}\ninput:focus,\ntextarea:focus {\n  outline: none;\n}\ninput,\nbutton {\n  margin: 5px;\n}\nbutton {\n  background: lightgray;\n  border: none;\n  padding: 5px;\n  transition: all 0.4s ease;\n}\nbutton:hover {\n  background: black;\n  color: white;\n}\n#spinner {\n  position: fixed;\n  left: 50%;\n  top: 50%;\n  opacity: 0;\n  visibility: hidden;\n  transition: all ease 0.4s;\n  width: 140px;\n  margin-left: -70px;\n  margin-top: -78.2px;\n}\nform {\n  text-align: center;\n}\n.password-reset {\n  cursor: pointer;\n}\n"
 
 /***/ }),
 
@@ -793,6 +890,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_content_content_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @components/content/content.component */ "./src/app/components/content/content.component.ts");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _components_views_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @components/views/login/login.component */ "./src/app/components/views/login/login.component.ts");
+/* harmony import */ var _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @components/auth/passwordreset/passwordreset.component */ "./src/app/components/auth/passwordreset/passwordreset.component.ts");
 
 
 
@@ -802,7 +900,7 @@ __webpack_require__.r(__webpack_exports__);
 // import { BackendComponent } from '@components/page/backend/backend.component'
 // import { VerifyMailComponent } from '@components/page/verify-mail/verify-mail.component'
 // import { PasswordResetUseComponent } from '@components/auth/password-reset-use/password-reset-use.component'
-// import { PasswordResetRequestComponent } from '@components/auth/password-reset-request/password-reset-request.component'
+
 // import { AdminComponent } from '@components/page/admin/admin.component'
 // import { AdvantagesComponent } from '@components/page/advantages/advantages.component'
 // import { UserService } from '../service/user.service'
@@ -831,6 +929,63 @@ var uiRouterStates = [
             main: { component: _components_views_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
         },
         data: {}
+    },
+    // {
+    //    name: 'base.registration',
+    //    url: '/token-sale',
+    //    views: {
+    //       main: { component: RegistrationComponent }
+    //    },
+    //    data: {
+    //       background: 'red'
+    //    }
+    // },
+    // {
+    //    name: 'base.registrationsuccessfull', 
+    //    url: '/register-success',  
+    //    views: {
+    //       main: {component: RegistersuccessfullComponent} as Ng2ViewDeclaration,
+    //    },
+    //    data: {
+    //       background: 'red'
+    //    }
+    // },
+    // {
+    //    name: 'base.auth', 
+    //    url: '/auth',  
+    //    views: {
+    //       main: {component: AuthComponent} as Ng2ViewDeclaration,
+    //    },
+    //    data: {}
+    // },
+    // {
+    //    name: 'base.verify_email', 
+    //    url: '/verify-email/:user_id/:confirmation_code',  
+    //    resolve: [
+    //       {
+    //          token: 'user_id', 
+    //          deps: [Transition],
+    //          resolveFn: resolveUserId
+    //       },
+    //       {
+    //          token: 'confirmation_code', 
+    //          deps: [Transition],
+    //          resolveFn: resolveConfirmationCode
+    //       }
+    //    ],
+    //    views: {
+    //       main: {component: VerifyMailComponent} as Ng2ViewDeclaration,
+    //    },
+    //    data: {}
+    // },
+    {
+        name: 'base.password_reset',
+        url: '/password-reset',
+        resolve: [],
+        views: {
+            main: { component: _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_4__["PasswordResetComponent"] }
+        },
+        data: { background: 'red' }
     },
 ];
 
