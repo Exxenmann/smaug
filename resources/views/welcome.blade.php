@@ -7,23 +7,18 @@
 
         <title>Smaug</title>
 
-        <!-- Fonts -->
-{{--         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> --}}
-
     </head>
     <body>
-{{--         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-        </div> --}}
+
+        <app-root>
+            <div style="display: block;height: 100%;width: 100%;position: fixed;">
+               <div style="position: absolute;top: 0;bottom: 0;margin: auto;height: 100px;width: 100%;">
+                    <center>
+                        <div style="color:white;"><br/><br/>Loading ...</div>
+                    </center>
+               </div>
+            </div>
+        </app-root>
 
         <?php readfile('angularbuild/scriptinjection.html'); ?>
 

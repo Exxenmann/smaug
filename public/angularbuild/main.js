@@ -122,12 +122,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _helper_jwt_inceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @helper/jwt-inceptor */ "./src/app/helper/jwt-inceptor.ts");
+/* harmony import */ var _components_auth_logout_logout_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/auth/logout/logout.component */ "./src/app/components/auth/logout/logout.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -161,7 +163,8 @@ var AppModule = /** @class */ (function () {
                 _components_cubestack_cubestack_component__WEBPACK_IMPORTED_MODULE_10__["CubestackComponent"],
                 _components_views_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"],
                 _components_modals_modal_general_modal_general_component__WEBPACK_IMPORTED_MODULE_12__["ModalGeneralComponent"],
-                _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_13__["PasswordResetComponent"]
+                _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_13__["PasswordResetComponent"],
+                _components_auth_logout_logout_component__WEBPACK_IMPORTED_MODULE_18__["LogoutComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -184,6 +187,69 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/auth/logout/logout.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/components/auth/logout/logout.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  logout works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/auth/logout/logout.component.less":
+/*!**************************************************************!*\
+  !*** ./src/app/components/auth/logout/logout.component.less ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/auth/logout/logout.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/components/auth/logout/logout.component.ts ***!
+  \************************************************************/
+/*! exports provided: LogoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogoutComponent", function() { return LogoutComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LogoutComponent = /** @class */ (function () {
+    function LogoutComponent() {
+    }
+    LogoutComponent.prototype.ngOnInit = function () {
+    };
+    LogoutComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-logout',
+            template: __webpack_require__(/*! ./logout.component.html */ "./src/app/components/auth/logout/logout.component.html"),
+            styles: [__webpack_require__(/*! ./logout.component.less */ "./src/app/components/auth/logout/logout.component.less")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LogoutComponent);
+    return LogoutComponent;
 }());
 
 
@@ -543,7 +609,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\r\n  <span>://SMAUG</span>\r\n  <span id=\"cursor\" style=\"padding-left: 5px;\">█</span>\r\n</h1>"
+module.exports = "<h1>\r\n  <span>://SMAUG</span>\r\n  <span id=\"cursor\" style=\"padding-left: 5px;\">█</span>\r\n  <span><smaug-logout></smaug-logout></span>\r\n</h1>"
 
 /***/ }),
 
@@ -690,17 +756,6 @@ var ModalGeneralComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/views/dashboard/dashboard.component.css":
-/*!********************************************************************!*\
-  !*** ./src/app/components/views/dashboard/dashboard.component.css ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ "./src/app/components/views/dashboard/dashboard.component.html":
 /*!*********************************************************************!*\
   !*** ./src/app/components/views/dashboard/dashboard.component.html ***!
@@ -709,6 +764,17 @@ module.exports = ""
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  dashboard works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/views/dashboard/dashboard.component.less":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/views/dashboard/dashboard.component.less ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
 
 /***/ }),
 
@@ -742,7 +808,7 @@ var DashboardComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-dashboard',
             template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/components/views/dashboard/dashboard.component.html"),
-            styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/components/views/dashboard/dashboard.component.css")]
+            styles: [__webpack_require__(/*! ./dashboard.component.less */ "./src/app/components/views/dashboard/dashboard.component.less")]
         }),
         __metadata("design:paramtypes", [])
     ], DashboardComponent);
@@ -807,31 +873,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(formBuilder, 
-    // private userService: UserService,
-    authenticationService, stateService, loadingoverlayService, modalService) {
+    function LoginComponent(formBuilder, authenticationService, stateService, loadingoverlayService, modalService) {
         this.formBuilder = formBuilder;
         this.authenticationService = authenticationService;
         this.stateService = stateService;
         this.loadingoverlayService = loadingoverlayService;
         this.modalService = modalService;
-        this.submitted = false;
-        this.onSubmit_event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     LoginComponent.prototype.onSubmit = function () {
         var _this = this;
-        this.submitted = true;
         // stop here if form is invalid
         if (this.loginForm.invalid)
             return;
-        this.onSubmit_event.emit();
         this.loadingoverlayService.start();
         this.authenticationService.login(this.f.email.value, this.f.password.value)
             .then(function () {
             // SUCCESS
             _this.loadingoverlayService.stop();
-            // this.stateService.go('base.backend')
-            console.log("login successfull");
+            _this.stateService.go('base.dashboard');
         }, function () {
             // ERROR
         });
@@ -842,20 +901,11 @@ var LoginComponent = /** @class */ (function () {
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email]]
         });
     };
-    LoginComponent.prototype.register = function () {
-        // button itself handles stateservice.goto
-        // currently only closes dialog so we use it
-        this.onSubmit_event.emit();
-    };
     Object.defineProperty(LoginComponent.prototype, "f", {
         get: function () { return this.loginForm.controls; },
         enumerable: true,
         configurable: true
     });
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-    ], LoginComponent.prototype, "onSubmit_event", void 0);
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-login',
@@ -890,20 +940,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_content_content_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @components/content/content.component */ "./src/app/components/content/content.component.ts");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _components_views_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @components/views/login/login.component */ "./src/app/components/views/login/login.component.ts");
-/* harmony import */ var _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @components/auth/passwordreset/passwordreset.component */ "./src/app/components/auth/passwordreset/passwordreset.component.ts");
+/* harmony import */ var _components_views_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @components/views/dashboard/dashboard.component */ "./src/app/components/views/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @components/auth/passwordreset/passwordreset.component */ "./src/app/components/auth/passwordreset/passwordreset.component.ts");
 
 
 
 // "views"
 
-// import { AuthComponent } from '@components/auth/auth/auth.component'
-// import { BackendComponent } from '@components/page/backend/backend.component'
+
 // import { VerifyMailComponent } from '@components/page/verify-mail/verify-mail.component'
 // import { PasswordResetUseComponent } from '@components/auth/password-reset-use/password-reset-use.component'
 
-// import { AdminComponent } from '@components/page/admin/admin.component'
-// import { AdvantagesComponent } from '@components/page/advantages/advantages.component'
-// import { UserService } from '../service/user.service'
 // import { AuthenticationService } from '../service/authentication.service'
 // import { PrivacyPolicyComponent } from '@components/page/privacy-policy/privacy-policy.component'
 // import { LegalDisclaimerComponent } from '@components/page/legal-disclaimer/legal-disclaimer.component'
@@ -930,60 +977,20 @@ var uiRouterStates = [
         },
         data: {}
     },
-    // {
-    //    name: 'base.registration',
-    //    url: '/token-sale',
-    //    views: {
-    //       main: { component: RegistrationComponent }
-    //    },
-    //    data: {
-    //       background: 'red'
-    //    }
-    // },
-    // {
-    //    name: 'base.registrationsuccessfull', 
-    //    url: '/register-success',  
-    //    views: {
-    //       main: {component: RegistersuccessfullComponent} as Ng2ViewDeclaration,
-    //    },
-    //    data: {
-    //       background: 'red'
-    //    }
-    // },
-    // {
-    //    name: 'base.auth', 
-    //    url: '/auth',  
-    //    views: {
-    //       main: {component: AuthComponent} as Ng2ViewDeclaration,
-    //    },
-    //    data: {}
-    // },
-    // {
-    //    name: 'base.verify_email', 
-    //    url: '/verify-email/:user_id/:confirmation_code',  
-    //    resolve: [
-    //       {
-    //          token: 'user_id', 
-    //          deps: [Transition],
-    //          resolveFn: resolveUserId
-    //       },
-    //       {
-    //          token: 'confirmation_code', 
-    //          deps: [Transition],
-    //          resolveFn: resolveConfirmationCode
-    //       }
-    //    ],
-    //    views: {
-    //       main: {component: VerifyMailComponent} as Ng2ViewDeclaration,
-    //    },
-    //    data: {}
-    // },
+    {
+        name: 'base.dashboard',
+        url: '/dashboard',
+        views: {
+            main: { component: _components_views_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__["DashboardComponent"] },
+        },
+        data: {},
+    },
     {
         name: 'base.password_reset',
         url: '/password-reset',
         resolve: [],
         views: {
-            main: { component: _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_4__["PasswordResetComponent"] }
+            main: { component: _components_auth_passwordreset_passwordreset_component__WEBPACK_IMPORTED_MODULE_5__["PasswordResetComponent"] }
         },
         data: { background: 'red' }
     },

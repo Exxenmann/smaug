@@ -22,6 +22,7 @@ import { ReactiveFormsModule, FormsModule }    from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { JwtInterceptor } from '@helper/jwt-inceptor';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { JwtInterceptor } from '@helper/jwt-inceptor';
     CubestackComponent,
     DashboardComponent,
     ModalGeneralComponent,
-    PasswordResetComponent
+    PasswordResetComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

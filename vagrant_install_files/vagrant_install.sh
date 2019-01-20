@@ -25,9 +25,22 @@ export $(egrep -v '^#' /home/pi/smaug/.env | xargs)
 
 # everything after this point goes to logfiles
 
-printf "XX install PHP XX\n\n"
+printf "XX install system tools XX\n\n"
 {
   sudo apt-get update -y --allow-downgrades --allow-remove-essential --allow-change-held-packages
+  sudo apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages unzip
+} >> $logfile 2>>$error_logfile
+
+printf "XX create swap file XX\n\n"
+{
+  sudo fallocate -l 2G /swapfile
+  sudo chmod 600 /swapfile
+  sudo mkswap /swapfile
+  sudo swapon /swapfile
+} >> $logfile 2>>$error_logfile
+
+printf "XX install PHP XX\n\n"
+{
   sudo apt install php7.0-mysql php7.0-cli php7.0-common php7.0 php7.0-curl php7.0-gd php7.0-imap php7.0-json php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-xmlrpc php7.0-xml php7.0-fpm php7.0-zip php7.0-mbstring -y
 } >> $logfile 2>>$error_logfile
 
