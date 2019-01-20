@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Mail\PasswordReset;
+use App\Mail\account\PwReset;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -63,7 +63,7 @@ class ForgotPasswordController extends Controller
 
       $user->update();
 
-      $mailContent = new PasswordReset($user, $token);
+      $mailContent = new PwReset($user, $token);
 
       $name = $user->firstname." ".$user->lastname;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail;
+namespace App\Mail\account;
 
 use App\User;
 use Illuminate\Bus\Queueable;
@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PasswordReset extends Mailable
+class PwReset extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,7 +32,7 @@ class PasswordReset extends Mailable
      * @return $this
      */
     public function build() {
-        return $this->subject('smaug - Reset your password')->markdown('emails.account.reset')->with([
+        return $this->subject('smaug - Reset your password')->markdown('emails.account.pwreset')->with([
             'user_name' => $this->user->firstname." ".$this->user->lastname,
             'token' => $this->token
         ]);
