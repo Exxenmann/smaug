@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "../public/angularbuild",
+            "deployUrl" : "angularbuild/",
             "index": "src/scriptinjection.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

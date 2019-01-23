@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
 
 import {UIRouterModule} from "@uirouter/angular";
 import { uiRouterConfig, uiRouterStates } from '@configs/router-config'
@@ -50,6 +51,7 @@ import { LogoutComponent } from './components/auth/logout/logout.component';
 
   ],
   providers:[
+    {provide: APP_BASE_HREF, useValue : '/' },
     RestService,
     {
       provide: HTTP_INTERCEPTORS,
